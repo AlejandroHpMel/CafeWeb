@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafetec – Instituto Tecnológico de Pabellón de Arteaga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy:   #0B1F4B;
+      --navy2:  #122360;
+      --yellow: #F5C400;
+      --red:    #D92B2B;
+      --white:  #FFFFFF;
+      --cream:  #FFF8E7;
+      --gray:   #f0f2f7;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    header {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    .hero-band {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 5px solid var(--yellow);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 18px; }
+    .logo-icon {
+      width: 64px; height: 64px;
+      background: var(--yellow);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 0 0 6px rgba(245,196,0,.25);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 6px rgba(245,196,0,.25); }
+      50%      { box-shadow: 0 0 0 14px rgba(245,196,0,.08); }
+    }
+    .logo-text h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      line-height: 1;
+    }
+    .logo-text span {
+      font-size: .85rem;
+      color: var(--yellow);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .85rem;
+      padding: 7px 16px;
+      border-radius: 30px;
+      border: 2px solid transparent;
+      transition: all .25s;
+      letter-spacing: .5px;
+    }
+    nav a:hover {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .hero-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 70px 24px 80px;
+      gap: 16px;
+      background: radial-gradient(ellipse at 50% 0%, #1a3a8a 0%, var(--navy) 70%);
+    }
+    .hero-body h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      color: var(--white);
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+    .hero-body h2 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+    .hero-body p {
+      color: rgba(255,255,255,.75);
+      font-size: 1.1rem;
+      max-width: 480px;
+    }
+    .hero-btn {
+      margin-top: 8px;
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      padding: 14px 38px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: transform .2s, background .2s;
+      box-shadow: 0 8px 24px rgba(217,43,43,.45);
+    }
+    .hero-btn:hover { background: #b01e1e; transform: translateY(-2px); }
+
+    /* ─── STRIPES ─── */
+    .stripe {
+      height: 8px;
+      background: linear-gradient(90deg, var(--red) 0%, var(--red) 33%, var(--yellow) 33%, var(--yellow) 66%, var(--navy) 66%);
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    section { padding: 60px 24px; }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 3px;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .section-title span { color: var(--red); }
+    .section-sub {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+      font-size: .95rem;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* ─── CATEGORY TABS ─── */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+    .tab-btn {
+      background: var(--white);
+      border: 2.5px solid var(--navy);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: .9rem;
+      padding: 9px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all .2s;
+      letter-spacing: .5px;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--navy);
+      color: var(--yellow);
+      border-color: var(--navy);
+    }
+
+    /* ─── MENU GRID ─── */
+    .menu-section { display: none; }
+    .menu-section.visible { display: block; }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(11,31,75,.1);
+      transition: transform .25s, box-shadow .25s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(11,31,75,.18);
+    }
+    .card-header {
+      background: var(--navy);
+      padding: 18px 20px 14px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .card-emoji { font-size: 2.2rem; }
+    .card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
+    .card-body { padding: 16px 20px 20px; flex: 1; }
+    .card-body h4 {
+      font-size: .78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .variants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .tag {
+      background: var(--gray);
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .extras-list {
+      font-size: .83rem;
+      color: #444;
+      line-height: 1.7;
+    }
+    .extras-list li { list-style: none; padding-left: 14px; position: relative; }
+    .extras-list li::before { content: "+"; position: absolute; left: 0; color: var(--red); font-weight: 900; }
+
+    .add-btn {
+      margin: 12px 20px 20px;
+      display: block;
+      text-align: center;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      font-size: .9rem;
+      padding: 11px;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      letter-spacing: .5px;
+      transition: background .2s, transform .15s;
+    }
+    .add-btn:hover { background: #b01e1e; transform: scale(1.02); }
+
+    /* ─── SNACKS ─── */
+    #snacks { background: var(--navy); }
+    #snacks .section-title { color: var(--yellow); }
+    #snacks .section-title span { color: var(--red); }
+    #snacks .section-sub { color: rgba(255,255,255,.65); }
+    .snack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .snack-card {
+      background: rgba(255,255,255,.06);
+      border: 2px solid rgba(245,196,0,.25);
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: center;
+      transition: background .2s, transform .2s;
+    }
+    .snack-card:hover {
+      background: rgba(245,196,0,.12);
+      transform: translateY(-4px);
+    }
+    .snack-card .s-emoji { font-size: 2.8rem; margin-bottom: 10px; display: block; }
+    .snack-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--yellow);
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .snack-card .variants { justify-content: center; }
+    .snack-card .tag { background: rgba(255,255,255,.1); color: rgba(255,255,255,.85); }
+
+    /* ─── BEBIDAS ─── */
+    #bebidas { background: var(--gray); }
+    .drink-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .drink-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 26px 22px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(11,31,75,.1);
+      transition: transform .2s;
+    }
+    .drink-card:hover { transform: translateY(-4px); }
+    .drink-card .d-emoji { font-size: 3rem; display: block; margin-bottom: 12px; }
+    .drink-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    /* ─── CART ─── */
+    #cart-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--navy2);
+      border-top: 4px solid var(--yellow);
+      padding: 14px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+    }
+    #cart-bar.visible { transform: translateY(0); }
+    #cart-bar span { color: var(--white); font-weight: 700; font-size: .95rem; }
+    #cart-bar strong { color: var(--yellow); }
+    #order-btn {
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      padding: 10px 28px;
+      border-radius: 30px;
+      border: none; cursor: pointer;
+      font-size: .95rem;
+      letter-spacing: .5px;
+      transition: background .2s;
+    }
+    #order-btn:hover { background: #b01e1e; }
+
+    /* ─── ORDER MODAL ─── */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.65);
+      z-index: 2000;
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px;
+      max-width: 480px; width: 90%;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,.35);
+      animation: slideUp .35s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .modal h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--navy);
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+    .modal-close {
+      position: absolute; top: 18px; right: 22px;
+      background: none; border: none; font-size: 1.6rem;
+      cursor: pointer; color: #888;
+      transition: color .2s;
+    }
+    .modal-close:hover { color: var(--red); }
+    #cart-items { list-style: none; margin-bottom: 18px; }
+    #cart-items li {
+      display: flex; justify-content: space-between;
+      padding: 8px 0; border-bottom: 1px solid #eee;
+      font-size: .9rem; font-weight: 600;
+    }
+    .rm-btn {
+      background: none; border: none; color: var(--red);
+      cursor: pointer; font-weight: 900; font-size: 1rem;
+    }
+    .modal-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+    .modal-fields input, .modal-fields textarea {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-family: 'Nunito', sans-serif;
+      font-size: .9rem;
+      transition: border-color .2s;
+      resize: vertical;
+    }
+    .modal-fields input:focus, .modal-fields textarea:focus {
+      outline: none; border-color: var(--navy);
+    }
+    .modal-send {
+      width: 100%;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      padding: 13px;
+      border-radius: 30px;
+      border: none; cursor: pointer;
+      font-size: 1rem;
+      letter-spacing: .5px;
+      transition: background .2s;
+    }
+    .modal-send:hover { background: #b01e1e; }
+
+    /* ─── HORARIOS / INFO ─── */
+    #info {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      padding: 70px 24px;
+    }
+    #info .section-title { color: var(--white); }
+    #info .section-title span { color: var(--yellow); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .info-card {
+      background: rgba(255,255,255,.07);
+      border: 1.5px solid rgba(245,196,0,.25);
+      border-radius: 18px;
+      padding: 30px 26px;
+      text-align: center;
+    }
+    .info-card .i-icon { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+    .info-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--yellow);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .info-card p, .info-card a {
+      color: rgba(255,255,255,.8);
+      font-size: .92rem;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+    .info-card a:hover { color: var(--yellow); }
+    .badge-open {
+      display: inline-block;
+      background: #1a9e4e;
+      color: var(--white);
+      font-weight: 900;
+      font-size: .75rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+    .badge-closed {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      font-size: .75rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #07122e;
+      text-align: center;
+      padding: 22px;
+      color: rgba(255,255,255,.4);
+      font-size: .82rem;
+    }
+    footer strong { color: var(--yellow); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 640px) {
+      .hero-band { flex-direction: column; gap: 16px; padding: 20px; }
+      nav { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="hero-band">
+    <div class="logo-wrap">
+      <div class="logo-icon">☕</div>
+      <div class="logo-text">
+        <h1>Cafetec</h1>
+        <span>CAFETERÍA TECNOLÓGICA</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#menu">Menú</a>
+      <a href="#snacks">Snacks</a>
+      <a href="#bebidas">Bebidas</a>
+      <a href="#info">Horarios</a>
+      <a href="#info">Contacto</a>
+    </nav>
+  </div>
+  <div class="hero-body">
+    <h2>Tu Cafetería <em>Favorita</em><br>en el Tec</h2>
+    <p>Comida rica, precios accesibles y el sabor de siempre. ¡Ordena aquí mismo!</p>
+    <a href="#menu" class="hero-btn">🍽️ Ver Menú Completo</a>
+  </div>
+</header>
+<div class="stripe"></div>
+
+<!-- ══ MENÚ ══ -->
+<section id="menu">
+  <div class="container">
+    <h2 class="section-title">Nuestro <span>Menú</span></h2>
+    <p class="section-sub">Elige tu categoría y añade lo que más te antoje</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('tortas',this)">🥪 Tortas</button>
+      <button class="tab-btn" onclick="showTab('enchiladas',this)">🌮 Enchiladas</button>
+      <button class="tab-btn" onclick="showTab('tacos',this)">🌮 Tacos</button>
+      <button class="tab-btn" onclick="showTab('pizzas',this)">🍕 Pizzas</button>
+      <button class="tab-btn" onclick="showTab('hamburguesas',this)">🍔 Hamburguesas</button>
+      <button class="tab-btn" onclick="showTab('otros',this)">🍜 Más Platillos</button>
+    </div>
+
+    <!-- TORTAS -->
+    <div id="tab-tortas" class="menu-section visible">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Jamón</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Sencilla</span><span class="tag">Con queso</span><span class="tag">Especial</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Aguacate</li><li>Chipotle</li><li>Frijoles refritos</li><li>Jalapeño</li><li>Mayonesa extra</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Torta de Jamón')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Milanesa</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Res</span><span class="tag">Pollo</span><span class="tag">Doble</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Crema</li><li>Queso Oaxaca</li><li>Chile de árbol</li><li>Aguacate</li><li>Jitomate extra</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Torta de Milanesa')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Pierna</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Sencilla</span><span class="tag">Con mole</span><span class="tag">Completa</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Frijoles</li><li>Aguacate</li><li>Queso fresco</li><li>Salsa roja</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Torta de Pierna')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta Ahogada</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Suave</span><span class="tag">Picante</span><span class="tag">Media</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Cebolla extra</li><li>Orégano</li><li>Salsa de chile de árbol</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Torta Ahogada')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENCHILADAS -->
+    <div id="tab-enchiladas" class="menu-section">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Rojas</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Pollo</span><span class="tag">Queso</span><span class="tag">Res</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Crema extra</li><li>Queso rallado</li><li>Cebolla</li><li>Aguacate</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Enchiladas Rojas')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Verdes</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Pollo</span><span class="tag">Queso</span><span class="tag">Mixtas</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Tomatillo extra</li><li>Cilantro</li><li>Crema</li><li>Chipotle</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Enchiladas Verdes')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Suizas</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Pollo</span><span class="tag">Hongos</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Queso manchego extra</li><li>Crema</li><li>Epazote</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Enchiladas Suizas')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enfrijoladas</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Queso</span><span class="tag">Pollo</span><span class="tag">Chorizo</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Frijol negro</li><li>Epazote</li><li>Queso fresco</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Enfrijoladas')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TACOS -->
+    <div id="tab-tacos" class="menu-section">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Pastor</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Orden 3</span><span class="tag">Orden 5</span><span class="tag">Con piña</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Piña extra</li><li>Cebolla y cilantro</li><li>Salsa verde / roja</li><li>Limón</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Tacos de Pastor')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Canasta</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Frijoles</span><span class="tag">Papa</span><span class="tag">Chicharrón</span><span class="tag">Mole</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Chile en vinagre</li><li>Cebolla curtida</li><li>Salsa extra</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Tacos de Canasta')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Asada</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Res</span><span class="tag">Pollo</span><span class="tag">Mixto</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Guacamole</li><li>Pico de gallo</li><li>Salsa habanero</li><li>Queso</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Tacos de Asada')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos Dorados</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Papa</span><span class="tag">Pollo</span><span class="tag">Res</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Lechuga</li><li>Crema</li><li>Queso rallado</li><li>Salsa</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Tacos Dorados')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIZZAS -->
+    <div id="tab-pizzas" class="menu-section">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Margherita</div></div>
+          <div class="card-body">
+            <h4>Tamaños</h4>
+            <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Albahaca fresca</li><li>Aceitunas</li><li>Champiñones</li><li>Jalapeño</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Pizza Margherita')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Pepperoni</div></div>
+          <div class="card-body">
+            <h4>Tamaños</h4>
+            <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Doble pepperoni</li><li>Queso extra</li><li>Chile rojo</li><li>Cebolla</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Pizza Pepperoni')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Mexicana</div></div>
+          <div class="card-body">
+            <h4>Tamaños</h4>
+            <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Chorizo extra</li><li>Rajas de chile</li><li>Elote</li><li>Jalapeño</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Pizza Mexicana')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza 4 Quesos</div></div>
+          <div class="card-body">
+            <h4>Tamaños</h4>
+            <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Queso azul</li><li>Mozzarella extra</li><li>Nuez</li><li>Miel de abeja</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Pizza 4 Quesos')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HAMBURGUESAS -->
+    <div id="tab-hamburguesas" class="menu-section">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa Clásica</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Sencilla</span><span class="tag">Doble</span><span class="tag">Con tocino</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Tocino extra</li><li>Queso americano</li><li>Aguacate</li><li>Cebolla caramelizada</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Hamburguesa Clásica')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa BBQ</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Regular</span><span class="tag">Doble carne</span><span class="tag">Picante</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Salsa BBQ extra</li><li>Jalapeños</li><li>Anillos de cebolla</li><li>Queso cheddar</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Hamburguesa BBQ')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa de Pollo</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Crispy</span><span class="tag">A la plancha</span><span class="tag">Spicy</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Guacamole</li><li>Queso suizo</li><li>Mayonesa de chipotle</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Hamburguesa de Pollo')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa Especial</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Con huevo</span><span class="tag">Mushroom</span><span class="tag">Deluxe</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list">
+              <li>Huevo estrellado</li><li>Champiñones salteados</li><li>Pimientos asados</li><li>Tocino</li>
+            </ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Hamburguesa Especial')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div id="tab-otros" class="menu-section">
+      <div class="menu-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🍜</span><div class="card-name">Sopa de Pasta</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Seca</span><span class="tag">Aguada</span><span class="tag">Con crema</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list"><li>Queso rallado</li><li>Crema extra</li><li>Chile serrano</li></ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Sopa de Pasta')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌯</span><div class="card-name">Burritos</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Frijoles</span><span class="tag">Pollo</span><span class="tag">Asada</span><span class="tag">Mixto</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list"><li>Arroz</li><li>Pico de gallo</li><li>Crema</li><li>Guacamole</li></ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Burrito')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🥗</span><div class="card-name">Quesadillas</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Queso</span><span class="tag">Pollo</span><span class="tag">Chorizo</span><span class="tag">Hongos</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list"><li>Huitlacoche</li><li>Flor de calabaza</li><li>Rajas con crema</li></ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Quesadilla')">+ Agregar al pedido</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-emoji">🌭</span><div class="card-name">Hot Dogs</div></div>
+          <div class="card-body">
+            <h4>Variantes</h4>
+            <div class="variants"><span class="tag">Sencillo</span><span class="tag">Con tocino</span><span class="tag">Especial</span></div>
+            <h4>Ingredientes extra</h4>
+            <ul class="extras-list"><li>Cebolla frita</li><li>Mostaza / catsup</li><li>Mayonesa</li><li>Chile jalapeño</li></ul>
+          </div>
+          <button class="add-btn" onclick="addItem('Hot Dog')">+ Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ══ SNACKS ══ -->
+<section id="snacks">
+  <div class="container">
+    <h2 class="section-title">🎉 <span>Snacks</span></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.65)">Para esos momentos entre clases</p>
+    <div class="snack-grid">
+      <div class="snack-card">
+        <span class="s-emoji">🌽</span>
+        <h3>Doritos</h3>
+        <div class="variants">
+          <span class="tag">Nacho</span><span class="tag">Flamin Hot</span><span class="tag">Salsa Verde</span><span class="tag">Dinamita</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🥔</span>
+        <h3>Ruffles</h3>
+        <div class="variants">
+          <span class="tag">Queso</span><span class="tag">Crema y Cebolla</span><span class="tag">Original</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🧡</span>
+        <h3>Sabritas</h3>
+        <div class="variants">
+          <span class="tag">Original</span><span class="tag">Limón</span><span class="tag">Adobadas</span><span class="tag">Habanero</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🍪</span>
+        <h3>Galletas</h3>
+        <div class="variants">
+          <span class="tag">Oreo</span><span class="tag">Chokis</span><span class="tag">Marías</span><span class="tag">Principe</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🌶️</span>
+        <h3>Takis</h3>
+        <div class="variants">
+          <span class="tag">Fuego</span><span class="tag">Guacamole</span><span class="tag">Nitro</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🍫</span>
+        <h3>Chocolates</h3>
+        <div class="variants">
+          <span class="tag">Carlos V</span><span class="tag">Abuelita</span><span class="tag">Kinder</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🍬</span>
+        <h3>Dulces</h3>
+        <div class="variants">
+          <span class="tag">Pulparindo</span><span class="tag">Mazapán</span><span class="tag">Pelon Pelo Rico</span>
+        </div>
+      </div>
+      <div class="snack-card">
+        <span class="s-emoji">🥜</span>
+        <h3>Maní / Cacahuates</h3>
+        <div class="variants">
+          <span class="tag">Enchilados</span><span class="tag">Japoneses</span><span class="tag">Con limón</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ══ BEBIDAS ══ -->
+<section id="bebidas">
+  <div class="container">
+    <h2 class="section-title">Bebidas <span>y Refrescos</span></h2>
+    <p class="section-sub">Hidratación perfecta para tu día de estudio</p>
+    <div class="drink-grid">
+      <div class="drink-card">
+        <span class="d-emoji">🥤</span>
+        <h3>Refrescos</h3>
+        <div class="variants" style="justify-content:center">
+          <span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta Naranja</span><span class="tag">Sprite</span>
+          <span class="tag">Manzanita Sol</span><span class="tag">Mirinda</span><span class="tag">Sangría</span>
+        </div>
+      </div>
+      <div class="drink-card">
+        <span class="d-emoji">💧</span>
+        <h3>Agua Natural</h3>
+        <div class="variants" style="justify-content:center">
+          <span class="tag">500 ml</span><span class="tag">1 Litro</span><span class="tag">Vaso con hielo</span>
+        </div>
+      </div>
+      <div class="drink-card">
+        <span class="d-emoji">🫙</span>
+        <h3>Aguas Frescas</h3>
+        <div class="variants" style="justify-content:center">
+          <span class="tag">Jamaica</span><span class="tag">Horchata</span><span class="tag">Limón</span><span class="tag">Tamarindo</span>
+        </div>
+      </div>
+      <div class="drink-card">
+        <span class="d-emoji">☕</span>
+        <h3>Café</h3>
+        <div class="variants" style="justify-content:center">
+          <span class="tag">Americano</span><span class="tag">Capuchino</span><span class="tag">Café de olla</span><span class="tag">Nescafé</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ══ INFO ══ -->
+<section id="info">
+  <div class="container">
+    <h2 class="section-title" style="color:#fff">Horarios &amp; <span>Contacto</span></h2>
+    <p class="section-sub">Visítanos en el Tecnológico</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="i-icon">🕗</span>
+        <h3>Horarios</h3>
+        <p>
+          <strong style="color:var(--yellow)">Lunes – Sábado</strong><br>
+          8:00 AM – 2:00 PM<br><br>
+          <strong style="color:rgba(255,255,255,.5)">Domingos</strong><br>
+          Sin servicio
+        </p>
+        <span id="status-badge" class="badge-open">Calculando...</span>
+      </div>
+      <div class="info-card">
+        <span class="i-icon">📍</span>
+        <h3>Ubicación</h3>
+        <p>
+          Instituto Tecnológico<br>de Pabellón de Arteaga<br><br>
+          Pabellón de Arteaga, AGS<br>
+          México
+        </p>
+      </div>
+      <div class="info-card">
+        <span class="i-icon">📞</span>
+        <h3>Contacto</h3>
+        <p>
+          <strong style="color:var(--yellow)">Teléfono</strong><br>
+          <a href="tel:4652038627">465 203 8627</a><br><br>
+          <strong style="color:var(--yellow)">Correo</strong><br>
+          <a href="mailto:L241050162.pabellon.tecnm.mx">L241050162<br>.pabellon.tecnm.mx</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CART BAR ══ -->
+<div id="cart-bar">
+  <span>🛒 Tu pedido: <strong id="cart-count">0</strong> artículo(s)</span>
+  <button id="order-btn" onclick="openModal()">Ver pedido</button>
+</div>
+
+<!-- ══ MODAL ══ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Tu Pedido 🧾</h2>
+    <ul id="cart-items"></ul>
+    <div class="modal-fields">
+      <input type="text" id="customer-name" placeholder="Tu nombre" />
+      <input type="text" id="customer-group" placeholder="Carrera / Grupo (opcional)" />
+      <textarea id="customer-notes" placeholder="Notas o especificaciones..." rows="3"></textarea>
+    </div>
+    <button class="modal-send" onclick="sendOrder()">📲 Enviar pedido por WhatsApp</button>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2025 <strong>Cafetec</strong> · Instituto Tecnológico de Pabellón de Arteaga · Pabellón de Arteaga, AGS, México</p>
+</footer>
+
+<script>
+  /* ─ CART ─ */
+  let cart = [];
+
+  function addItem(name) {
+    cart.push(name);
+    document.getElementById('cart-count').textContent = cart.length;
+    const bar = document.getElementById('cart-bar');
+    bar.classList.add('visible');
+    bar.animate([{background:'#1a3a8a'},{background:'#F5C400'},{background:'#122360'}], {duration:500});
+  }
+
+  function openModal() {
+    const list = document.getElementById('cart-items');
+    list.innerHTML = '';
+    if (!cart.length) {
+      list.innerHTML = '<li style="color:#888;justify-content:center">Tu pedido está vacío</li>';
+    } else {
+      cart.forEach((item, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${item}</span><button class="rm-btn" onclick="removeItem(${i})">✕</button>`;
+        list.appendChild(li);
+      });
+    }
+    document.getElementById('modal').classList.add('open');
+  }
+
+  function removeItem(i) {
+    cart.splice(i, 1);
+    document.getElementById('cart-count').textContent = cart.length;
+    if (!cart.length) document.getElementById('cart-bar').classList.remove('visible');
+    openModal();
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+
+  function sendOrder() {
+    const name  = document.getElementById('customer-name').value.trim() || 'Sin nombre';
+    const group = document.getElementById('customer-group').value.trim();
+    const notes = document.getElementById('customer-notes').value.trim();
+    if (!cart.length) { alert('Agrega artículos primero.'); return; }
+    let msg = `*Pedido - Cafetec*\n\n👤 *Cliente:* ${name}`;
+    if (group) msg += `\n📚 *Grupo:* ${group}`;
+    msg += `\n\n🛒 *Artículos:*\n`;
+    cart.forEach((item, i) => msg += `${i+1}. ${item}\n`);
+    if (notes) msg += `\n📝 *Notas:* ${notes}`;
+    const url = `https://wa.me/524652038627?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  }
+
+  document.getElementById('modal').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+
+  /* ─ TABS ─ */
+  function showTab(tab, btn) {
+    document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('visible'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('visible');
+    btn.classList.add('active');
+  }
+
+  /* ─ STATUS BADGE ─ */
+  (function(){
+    const badge = document.getElementById('status-badge');
+    const now = new Date();
+    const day = now.getDay(); // 0=Sun,6=Sat
+    const h = now.getHours() + now.getMinutes()/60;
+    if (day === 0) {
+      badge.textContent = 'CERRADO HOY'; badge.className = 'badge-closed';
+    } else if (h >= 8 && h < 14) {
+      badge.textContent = '✅ ABIERTO AHORA'; badge.className = 'badge-open';
+    } else {
+      badge.textContent = 'CERRADO AHORA'; badge.className = 'badge-closed';
+    }
+  })();
+</script>
+</body>
+</html>
