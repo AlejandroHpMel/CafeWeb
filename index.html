@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cafetec – Instituto Tecnológico de Pabellón de Arteaga</title>
+  <title>CafeWeb – Instituto Tecnológico de Pabellón de Arteaga</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -16,9 +16,7 @@
       --gray:   #f0f2f7;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Nunito', sans-serif;
       background: var(--cream);
@@ -27,16 +25,9 @@
     }
 
     /* ─── HERO ─── */
-    header {
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
+    header { background: var(--navy); position: relative; overflow: hidden; padding: 0; }
     .hero-band {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 18px 48px;
       border-bottom: 5px solid var(--yellow);
     }
@@ -56,71 +47,37 @@
     }
     .logo-text h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.2rem;
-      letter-spacing: 3px;
-      color: var(--white);
-      line-height: 1;
+      font-size: 3.2rem; letter-spacing: 3px;
+      color: var(--white); line-height: 1;
     }
-    .logo-text span {
-      font-size: .85rem;
-      color: var(--yellow);
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+    .logo-text span { font-size: .85rem; color: var(--yellow); font-weight: 700; letter-spacing: 1px; }
     nav { display: flex; gap: 8px; flex-wrap: wrap; }
     nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: .85rem;
-      padding: 7px 16px;
-      border-radius: 30px;
-      border: 2px solid transparent;
-      transition: all .25s;
-      letter-spacing: .5px;
+      color: var(--white); text-decoration: none;
+      font-weight: 700; font-size: .85rem;
+      padding: 7px 16px; border-radius: 30px;
+      border: 2px solid transparent; transition: all .25s; letter-spacing: .5px;
     }
-    nav a:hover {
-      background: var(--yellow);
-      color: var(--navy);
-    }
+    nav a:hover { background: var(--yellow); color: var(--navy); }
 
     .hero-body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 70px 24px 80px;
-      gap: 16px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; text-align: center;
+      padding: 70px 24px 80px; gap: 16px;
       background: radial-gradient(ellipse at 50% 0%, #1a3a8a 0%, var(--navy) 70%);
     }
     .hero-body h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.8rem, 8vw, 6rem);
-      color: var(--white);
-      letter-spacing: 4px;
-      line-height: 1;
+      color: var(--white); letter-spacing: 4px; line-height: 1;
     }
-    .hero-body h2 em {
-      color: var(--yellow);
-      font-style: normal;
-    }
-    .hero-body p {
-      color: rgba(255,255,255,.75);
-      font-size: 1.1rem;
-      max-width: 480px;
-    }
+    .hero-body h2 em { color: var(--yellow); font-style: normal; }
+    .hero-body p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width: 480px; }
     .hero-btn {
-      margin-top: 8px;
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 900;
-      padding: 14px 38px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 1rem;
-      letter-spacing: 1px;
+      margin-top: 8px; display: inline-block;
+      background: var(--red); color: var(--white);
+      font-weight: 900; padding: 14px 38px; border-radius: 40px;
+      text-decoration: none; font-size: 1rem; letter-spacing: 1px;
       transition: transform .2s, background .2s;
       box-shadow: 0 8px 24px rgba(217,43,43,.45);
     }
@@ -136,185 +93,169 @@
     section { padding: 60px 24px; }
     .section-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.6rem;
-      letter-spacing: 3px;
-      color: var(--navy);
-      text-align: center;
-      margin-bottom: 10px;
+      font-size: 2.6rem; letter-spacing: 3px;
+      color: var(--navy); text-align: center; margin-bottom: 10px;
     }
     .section-title span { color: var(--red); }
-    .section-sub {
-      text-align: center;
-      color: #555;
-      margin-bottom: 40px;
-      font-size: .95rem;
-    }
+    .section-sub { text-align: center; color: #555; margin-bottom: 40px; font-size: .95rem; }
     .container { max-width: 1200px; margin: 0 auto; }
 
     /* ─── CATEGORY TABS ─── */
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 36px;
-    }
+    .tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
     .tab-btn {
-      background: var(--white);
-      border: 2.5px solid var(--navy);
-      color: var(--navy);
-      font-weight: 800;
-      font-size: .9rem;
-      padding: 9px 22px;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all .2s;
-      letter-spacing: .5px;
+      background: var(--white); border: 2.5px solid var(--navy);
+      color: var(--navy); font-weight: 800; font-size: .9rem;
+      padding: 9px 22px; border-radius: 30px;
+      cursor: pointer; transition: all .2s; letter-spacing: .5px;
     }
-    .tab-btn:hover, .tab-btn.active {
-      background: var(--navy);
-      color: var(--yellow);
-      border-color: var(--navy);
-    }
+    .tab-btn:hover, .tab-btn.active { background: var(--navy); color: var(--yellow); border-color: var(--navy); }
 
     /* ─── MENU GRID ─── */
     .menu-section { display: none; }
     .menu-section.visible { display: block; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
 
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
     .card {
-      background: var(--white);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 4px 18px rgba(11,31,75,.1);
+      background: var(--white); border-radius: 18px;
+      overflow: hidden; box-shadow: 0 4px 18px rgba(11,31,75,.1);
       transition: transform .25s, box-shadow .25s;
       display: flex; flex-direction: column;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(11,31,75,.18);
-    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(11,31,75,.18); }
     .card-header {
-      background: var(--navy);
-      padding: 18px 20px 14px;
+      background: var(--navy); padding: 18px 20px 14px;
       display: flex; align-items: center; gap: 14px;
     }
     .card-emoji { font-size: 2.2rem; }
     .card-name {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      color: var(--yellow);
-      letter-spacing: 1px;
+      font-size: 1.5rem; color: var(--yellow); letter-spacing: 1px;
     }
     .card-body { padding: 16px 20px 20px; flex: 1; }
     .card-body h4 {
-      font-size: .78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--red);
-      margin-bottom: 6px;
+      font-size: .78rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--red); margin-bottom: 6px;
     }
-    .variants {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
+    .variants { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
     .tag {
-      background: var(--gray);
-      color: var(--navy);
-      font-size: .78rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 20px;
+      background: var(--gray); color: var(--navy);
+      font-size: .78rem; font-weight: 700;
+      padding: 4px 12px; border-radius: 20px;
     }
-    .extras-list {
-      font-size: .83rem;
-      color: #444;
-      line-height: 1.7;
-    }
+    .extras-list { font-size: .83rem; color: #444; line-height: 1.7; }
     .extras-list li { list-style: none; padding-left: 14px; position: relative; }
     .extras-list li::before { content: "+"; position: absolute; left: 0; color: var(--red); font-weight: 900; }
 
+    /* ─── PRICE BADGE ─── */
+    .price-badge {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 900;
+      font-size: .95rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ─── STOCK BADGE ─── */
+    .stock-wrap {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 10px;
+    }
+    .stock-badge {
+      font-size: .78rem; font-weight: 800;
+      padding: 3px 11px; border-radius: 20px;
+      letter-spacing: .5px;
+    }
+    .stock-ok   { background: #d4f0dd; color: #1a7a3e; }
+    .stock-low  { background: #fff3cd; color: #9a6300; }
+    .stock-out  { background: #fde2e2; color: var(--red); }
+
     .add-btn {
       margin: 12px 20px 20px;
-      display: block;
-      text-align: center;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 900;
-      font-size: .9rem;
-      padding: 11px;
-      border-radius: 30px;
-      cursor: pointer;
-      border: none;
-      letter-spacing: .5px;
+      display: block; text-align: center;
+      background: var(--red); color: var(--white);
+      font-weight: 900; font-size: .9rem;
+      padding: 11px; border-radius: 30px;
+      cursor: pointer; border: none; letter-spacing: .5px;
       transition: background .2s, transform .15s;
     }
     .add-btn:hover { background: #b01e1e; transform: scale(1.02); }
+    .add-btn:disabled {
+      background: #ccc; cursor: not-allowed; transform: none;
+    }
 
     /* ─── SNACKS ─── */
     #snacks { background: var(--navy); }
     #snacks .section-title { color: var(--yellow); }
     #snacks .section-title span { color: var(--red); }
     #snacks .section-sub { color: rgba(255,255,255,.65); }
-    .snack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
+    .snack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
     .snack-card {
       background: rgba(255,255,255,.06);
       border: 2px solid rgba(245,196,0,.25);
-      border-radius: 16px;
-      padding: 22px 18px;
+      border-radius: 16px; padding: 22px 18px;
       text-align: center;
       transition: background .2s, transform .2s;
+      display: flex; flex-direction: column; align-items: center;
     }
-    .snack-card:hover {
-      background: rgba(245,196,0,.12);
-      transform: translateY(-4px);
-    }
+    .snack-card:hover { background: rgba(245,196,0,.12); transform: translateY(-4px); }
     .snack-card .s-emoji { font-size: 2.8rem; margin-bottom: 10px; display: block; }
     .snack-card h3 {
       font-family: 'Bebas Neue', sans-serif;
-      color: var(--yellow);
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
+      color: var(--yellow); font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 4px;
+    }
+    .snack-card .snack-price {
+      font-weight: 900; color: var(--yellow);
+      font-size: .9rem; margin-bottom: 8px;
     }
     .snack-card .variants { justify-content: center; }
     .snack-card .tag { background: rgba(255,255,255,.1); color: rgba(255,255,255,.85); }
+    .snack-card .stock-wrap { justify-content: center; }
+    .snack-add-btn {
+      margin-top: 12px;
+      background: var(--red); color: var(--white);
+      font-weight: 900; font-size: .82rem;
+      padding: 8px 18px; border-radius: 30px;
+      cursor: pointer; border: none;
+      transition: background .2s, transform .15s;
+      width: 100%;
+    }
+    .snack-add-btn:hover { background: #b01e1e; transform: scale(1.02); }
+    .snack-add-btn:disabled { background: #555; cursor: not-allowed; transform: none; }
 
     /* ─── BEBIDAS ─── */
     #bebidas { background: var(--gray); }
-    .drink-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 24px;
-    }
+    .drink-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
     .drink-card {
-      background: var(--white);
-      border-radius: 18px;
-      padding: 26px 22px;
-      text-align: center;
+      background: var(--white); border-radius: 18px;
+      padding: 26px 22px; text-align: center;
       box-shadow: 0 4px 18px rgba(11,31,75,.1);
       transition: transform .2s;
+      display: flex; flex-direction: column; align-items: center;
     }
     .drink-card:hover { transform: translateY(-4px); }
     .drink-card .d-emoji { font-size: 3rem; display: block; margin-bottom: 12px; }
     .drink-card h3 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      color: var(--navy);
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
+      font-size: 1.6rem; color: var(--navy); letter-spacing: 1.5px; margin-bottom: 4px;
     }
+    .drink-price {
+      font-weight: 900; color: var(--navy); font-size: .9rem; margin-bottom: 10px;
+    }
+    .drink-add-btn {
+      margin-top: 12px;
+      background: var(--navy); color: var(--yellow);
+      font-weight: 900; font-size: .82rem;
+      padding: 8px 18px; border-radius: 30px;
+      cursor: pointer; border: none;
+      transition: background .2s, transform .15s;
+      width: 100%;
+    }
+    .drink-add-btn:hover { background: #0a1840; transform: scale(1.02); }
+    .drink-add-btn:disabled { background: #ccc; cursor: not-allowed; color: #666; transform: none; }
 
     /* ─── CART ─── */
     #cart-bar {
@@ -330,36 +271,28 @@
     #cart-bar.visible { transform: translateY(0); }
     #cart-bar span { color: var(--white); font-weight: 700; font-size: .95rem; }
     #cart-bar strong { color: var(--yellow); }
+    #cart-bar-total { color: var(--yellow); font-weight: 900; font-size: 1rem; }
     #order-btn {
-      background: var(--red);
-      color: var(--white);
-      font-weight: 900;
-      padding: 10px 28px;
-      border-radius: 30px;
-      border: none; cursor: pointer;
-      font-size: .95rem;
-      letter-spacing: .5px;
-      transition: background .2s;
+      background: var(--red); color: var(--white);
+      font-weight: 900; padding: 10px 28px;
+      border-radius: 30px; border: none; cursor: pointer;
+      font-size: .95rem; letter-spacing: .5px; transition: background .2s;
     }
     #order-btn:hover { background: #b01e1e; }
 
     /* ─── ORDER MODAL ─── */
     .modal-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,.65);
-      z-index: 2000;
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.65); z-index: 2000;
       align-items: center; justify-content: center;
     }
     .modal-overlay.open { display: flex; }
     .modal {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 36px 32px;
-      max-width: 480px; width: 90%;
-      position: relative;
-      box-shadow: 0 24px 64px rgba(0,0,0,.35);
+      background: var(--white); border-radius: 20px;
+      padding: 36px 32px; max-width: 480px; width: 90%;
+      position: relative; box-shadow: 0 24px 64px rgba(0,0,0,.35);
       animation: slideUp .35s ease;
+      max-height: 90vh; overflow-y: auto;
     }
     @keyframes slideUp {
       from { transform: translateY(40px); opacity: 0; }
@@ -367,51 +300,55 @@
     }
     .modal h2 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      color: var(--navy);
-      letter-spacing: 2px;
-      margin-bottom: 18px;
+      font-size: 2rem; color: var(--navy); letter-spacing: 2px; margin-bottom: 18px;
     }
     .modal-close {
       position: absolute; top: 18px; right: 22px;
       background: none; border: none; font-size: 1.6rem;
-      cursor: pointer; color: #888;
-      transition: color .2s;
+      cursor: pointer; color: #888; transition: color .2s;
     }
     .modal-close:hover { color: var(--red); }
-    #cart-items { list-style: none; margin-bottom: 18px; }
+    #cart-items { list-style: none; margin-bottom: 8px; }
     #cart-items li {
-      display: flex; justify-content: space-between;
+      display: flex; justify-content: space-between; align-items: center;
       padding: 8px 0; border-bottom: 1px solid #eee;
-      font-size: .9rem; font-weight: 600;
+      font-size: .9rem; font-weight: 600; gap: 8px;
     }
-    .rm-btn {
-      background: none; border: none; color: var(--red);
-      cursor: pointer; font-weight: 900; font-size: 1rem;
+    #cart-items li .item-name { flex: 1; }
+    #cart-items li .item-price { color: var(--navy); font-weight: 800; white-space: nowrap; }
+    .rm-btn { background: none; border: none; color: var(--red); cursor: pointer; font-weight: 900; font-size: 1rem; }
+
+    /* ─── TOTAL ─── */
+    .cart-total-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 0 6px;
+      border-top: 2.5px solid var(--navy);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem; letter-spacing: 1px;
+      color: var(--navy);
     }
-    .modal-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+    .cart-total-row span:last-child { color: var(--red); font-size: 1.7rem; }
+
+    .modal-fields { display: flex; flex-direction: column; gap: 12px; margin: 18px 0; }
     .modal-fields input, .modal-fields textarea {
-      border: 2px solid #ddd;
-      border-radius: 10px;
-      padding: 11px 16px;
-      font-family: 'Nunito', sans-serif;
-      font-size: .9rem;
-      transition: border-color .2s;
-      resize: vertical;
+      border: 2px solid #ddd; border-radius: 10px;
+      padding: 11px 16px; font-family: 'Nunito', sans-serif;
+      font-size: .9rem; transition: border-color .2s; resize: vertical;
     }
-    .modal-fields input:focus, .modal-fields textarea:focus {
-      outline: none; border-color: var(--navy);
+    .modal-fields input:focus, .modal-fields textarea:focus { outline: none; border-color: var(--navy); }
+
+    .modal-order-total {
+      background: var(--navy); color: var(--yellow);
+      border-radius: 12px; padding: 12px 18px;
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; font-weight: 900; font-size: 1rem;
     }
+    .modal-order-total span:last-child { font-size: 1.3rem; }
+
     .modal-send {
-      width: 100%;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 900;
-      padding: 13px;
-      border-radius: 30px;
-      border: none; cursor: pointer;
-      font-size: 1rem;
-      letter-spacing: .5px;
+      width: 100%; background: var(--red); color: var(--white);
+      font-weight: 900; padding: 13px; border-radius: 30px;
+      border: none; cursor: pointer; font-size: 1rem; letter-spacing: .5px;
       transition: background .2s;
     }
     .modal-send:hover { background: #b01e1e; }
@@ -423,65 +360,39 @@
     }
     #info .section-title { color: var(--white); }
     #info .section-title span { color: var(--yellow); }
+    #info .section-sub { color: rgba(255,255,255,.6); }
     .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px; max-width: 1000px; margin: 0 auto;
     }
     .info-card {
-      background: rgba(255,255,255,.07);
-      border: 1.5px solid rgba(245,196,0,.25);
-      border-radius: 18px;
-      padding: 30px 26px;
-      text-align: center;
+      background: rgba(255,255,255,.07); border: 1.5px solid rgba(245,196,0,.25);
+      border-radius: 18px; padding: 30px 26px; text-align: center;
     }
     .info-card .i-icon { font-size: 2.8rem; margin-bottom: 14px; display: block; }
     .info-card h3 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      color: var(--yellow);
-      letter-spacing: 2px;
-      margin-bottom: 12px;
+      font-size: 1.5rem; color: var(--yellow); letter-spacing: 2px; margin-bottom: 12px;
     }
     .info-card p, .info-card a {
-      color: rgba(255,255,255,.8);
-      font-size: .92rem;
-      line-height: 1.8;
-      text-decoration: none;
+      color: rgba(255,255,255,.8); font-size: .92rem; line-height: 1.8; text-decoration: none;
     }
     .info-card a:hover { color: var(--yellow); }
     .badge-open {
-      display: inline-block;
-      background: #1a9e4e;
-      color: var(--white);
-      font-weight: 900;
-      font-size: .75rem;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-top: 10px;
-      letter-spacing: 1px;
+      display: inline-block; background: #1a9e4e; color: var(--white);
+      font-weight: 900; font-size: .75rem; padding: 4px 14px;
+      border-radius: 20px; margin-top: 10px; letter-spacing: 1px;
     }
     .badge-closed {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 900;
-      font-size: .75rem;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-top: 10px;
-      letter-spacing: 1px;
+      display: inline-block; background: var(--red); color: var(--white);
+      font-weight: 900; font-size: .75rem; padding: 4px 14px;
+      border-radius: 20px; margin-top: 10px; letter-spacing: 1px;
     }
 
     /* ─── FOOTER ─── */
     footer {
-      background: #07122e;
-      text-align: center;
-      padding: 22px;
-      color: rgba(255,255,255,.4);
-      font-size: .82rem;
+      background: #07122e; text-align: center;
+      padding: 22px; color: rgba(255,255,255,.4); font-size: .82rem;
     }
     footer strong { color: var(--yellow); }
 
@@ -489,6 +400,7 @@
     @media (max-width: 640px) {
       .hero-band { flex-direction: column; gap: 16px; padding: 20px; }
       nav { justify-content: center; }
+      #cart-bar { padding: 12px 16px; gap: 8px; }
     }
   </style>
 </head>
@@ -500,7 +412,7 @@
     <div class="logo-wrap">
       <div class="logo-icon">☕</div>
       <div class="logo-text">
-        <h1>Cafetec</h1>
+        <h1>CafeWeb</h1>
         <span>CAFETERÍA TECNOLÓGICA</span>
       </div>
     </div>
@@ -538,316 +450,354 @@
     <!-- TORTAS -->
     <div id="tab-tortas" class="menu-section visible">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Jamón</div></div>
           <div class="card-body">
+            <div class="price-badge">$35</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-torta-jamon">📦 Stock: <strong>15</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Sencilla</span><span class="tag">Con queso</span><span class="tag">Especial</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Aguacate</li><li>Chipotle</li><li>Frijoles refritos</li><li>Jalapeño</li><li>Mayonesa extra</li>
-            </ul>
+            <ul class="extras-list"><li>Aguacate</li><li>Chipotle</li><li>Frijoles refritos</li><li>Jalapeño</li><li>Mayonesa extra</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Torta de Jamón')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Torta de Jamón', 35, 'torta-jamon')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Milanesa</div></div>
           <div class="card-body">
+            <div class="price-badge">$55</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-torta-milanesa">📦 Stock: <strong>10</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Res</span><span class="tag">Pollo</span><span class="tag">Doble</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Crema</li><li>Queso Oaxaca</li><li>Chile de árbol</li><li>Aguacate</li><li>Jitomate extra</li>
-            </ul>
+            <ul class="extras-list"><li>Crema</li><li>Queso Oaxaca</li><li>Chile de árbol</li><li>Aguacate</li><li>Jitomate extra</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Torta de Milanesa')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Torta de Milanesa', 55, 'torta-milanesa')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta de Pierna</div></div>
           <div class="card-body">
+            <div class="price-badge">$50</div>
+            <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-torta-pierna">📦 Stock: <strong>4</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Sencilla</span><span class="tag">Con mole</span><span class="tag">Completa</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Frijoles</li><li>Aguacate</li><li>Queso fresco</li><li>Salsa roja</li>
-            </ul>
+            <ul class="extras-list"><li>Frijoles</li><li>Aguacate</li><li>Queso fresco</li><li>Salsa roja</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Torta de Pierna')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Torta de Pierna', 50, 'torta-pierna')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🥪</span><div class="card-name">Torta Ahogada</div></div>
           <div class="card-body">
+            <div class="price-badge">$45</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-torta-ahogada">📦 Stock: <strong>12</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Suave</span><span class="tag">Picante</span><span class="tag">Media</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Cebolla extra</li><li>Orégano</li><li>Salsa de chile de árbol</li>
-            </ul>
+            <ul class="extras-list"><li>Cebolla extra</li><li>Orégano</li><li>Salsa de chile de árbol</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Torta Ahogada')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Torta Ahogada', 45, 'torta-ahogada')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
     <!-- ENCHILADAS -->
     <div id="tab-enchiladas" class="menu-section">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Rojas</div></div>
           <div class="card-body">
+            <div class="price-badge">$60</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-enchiladas-rojas">📦 Stock: <strong>10</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Pollo</span><span class="tag">Queso</span><span class="tag">Res</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Crema extra</li><li>Queso rallado</li><li>Cebolla</li><li>Aguacate</li>
-            </ul>
+            <ul class="extras-list"><li>Crema extra</li><li>Queso rallado</li><li>Cebolla</li><li>Aguacate</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Enchiladas Rojas')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Enchiladas Rojas', 60, 'enchiladas-rojas')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Verdes</div></div>
           <div class="card-body">
+            <div class="price-badge">$60</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-enchiladas-verdes">📦 Stock: <strong>10</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Pollo</span><span class="tag">Queso</span><span class="tag">Mixtas</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Tomatillo extra</li><li>Cilantro</li><li>Crema</li><li>Chipotle</li>
-            </ul>
+            <ul class="extras-list"><li>Tomatillo extra</li><li>Cilantro</li><li>Crema</li><li>Chipotle</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Enchiladas Verdes')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Enchiladas Verdes', 60, 'enchiladas-verdes')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enchiladas Suizas</div></div>
           <div class="card-body">
+            <div class="price-badge">$65</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-enchiladas-suizas">📦 Stock: <strong>8</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Pollo</span><span class="tag">Hongos</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Queso manchego extra</li><li>Crema</li><li>Epazote</li>
-            </ul>
+            <ul class="extras-list"><li>Queso manchego extra</li><li>Crema</li><li>Epazote</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Enchiladas Suizas')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Enchiladas Suizas', 65, 'enchiladas-suizas')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Enfrijoladas</div></div>
           <div class="card-body">
+            <div class="price-badge">$55</div>
+            <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-enfrijoladas">📦 Stock: <strong>5</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Queso</span><span class="tag">Pollo</span><span class="tag">Chorizo</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Frijol negro</li><li>Epazote</li><li>Queso fresco</li>
-            </ul>
+            <ul class="extras-list"><li>Frijol negro</li><li>Epazote</li><li>Queso fresco</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Enfrijoladas')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Enfrijoladas', 55, 'enfrijoladas')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
     <!-- TACOS -->
     <div id="tab-tacos" class="menu-section">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Pastor</div></div>
           <div class="card-body">
+            <div class="price-badge">$18 c/u</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-tacos-pastor">📦 Stock: <strong>30</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Orden 3</span><span class="tag">Orden 5</span><span class="tag">Con piña</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Piña extra</li><li>Cebolla y cilantro</li><li>Salsa verde / roja</li><li>Limón</li>
-            </ul>
+            <ul class="extras-list"><li>Piña extra</li><li>Cebolla y cilantro</li><li>Salsa verde / roja</li><li>Limón</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Tacos de Pastor')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Tacos de Pastor', 18, 'tacos-pastor')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Canasta</div></div>
           <div class="card-body">
+            <div class="price-badge">$15 c/u</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-tacos-canasta">📦 Stock: <strong>25</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Frijoles</span><span class="tag">Papa</span><span class="tag">Chicharrón</span><span class="tag">Mole</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Chile en vinagre</li><li>Cebolla curtida</li><li>Salsa extra</li>
-            </ul>
+            <ul class="extras-list"><li>Chile en vinagre</li><li>Cebolla curtida</li><li>Salsa extra</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Tacos de Canasta')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Tacos de Canasta', 15, 'tacos-canasta')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos de Asada</div></div>
           <div class="card-body">
+            <div class="price-badge">$22 c/u</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-tacos-asada">📦 Stock: <strong>20</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Res</span><span class="tag">Pollo</span><span class="tag">Mixto</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Guacamole</li><li>Pico de gallo</li><li>Salsa habanero</li><li>Queso</li>
-            </ul>
+            <ul class="extras-list"><li>Guacamole</li><li>Pico de gallo</li><li>Salsa habanero</li><li>Queso</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Tacos de Asada')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Tacos de Asada', 22, 'tacos-asada')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌮</span><div class="card-name">Tacos Dorados</div></div>
           <div class="card-body">
+            <div class="price-badge">$20 c/u</div>
+            <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-tacos-dorados">📦 Stock: <strong>3</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Papa</span><span class="tag">Pollo</span><span class="tag">Res</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Lechuga</li><li>Crema</li><li>Queso rallado</li><li>Salsa</li>
-            </ul>
+            <ul class="extras-list"><li>Lechuga</li><li>Crema</li><li>Queso rallado</li><li>Salsa</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Tacos Dorados')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Tacos Dorados', 20, 'tacos-dorados')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
     <!-- PIZZAS -->
     <div id="tab-pizzas" class="menu-section">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Margherita</div></div>
           <div class="card-body">
+            <div class="price-badge">$85 – $150</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-pizza-margherita">📦 Stock: <strong>8</strong></span></div>
             <h4>Tamaños</h4>
             <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Albahaca fresca</li><li>Aceitunas</li><li>Champiñones</li><li>Jalapeño</li>
-            </ul>
+            <ul class="extras-list"><li>Albahaca fresca</li><li>Aceitunas</li><li>Champiñones</li><li>Jalapeño</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Pizza Margherita')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Pizza Margherita', 85, 'pizza-margherita')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Pepperoni</div></div>
           <div class="card-body">
+            <div class="price-badge">$90 – $160</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-pizza-pepperoni">📦 Stock: <strong>8</strong></span></div>
             <h4>Tamaños</h4>
             <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Doble pepperoni</li><li>Queso extra</li><li>Chile rojo</li><li>Cebolla</li>
-            </ul>
+            <ul class="extras-list"><li>Doble pepperoni</li><li>Queso extra</li><li>Chile rojo</li><li>Cebolla</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Pizza Pepperoni')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Pizza Pepperoni', 90, 'pizza-pepperoni')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza Mexicana</div></div>
           <div class="card-body">
+            <div class="price-badge">$90 – $165</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-pizza-mexicana">📦 Stock: <strong>8</strong></span></div>
             <h4>Tamaños</h4>
             <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Chorizo extra</li><li>Rajas de chile</li><li>Elote</li><li>Jalapeño</li>
-            </ul>
+            <ul class="extras-list"><li>Chorizo extra</li><li>Rajas de chile</li><li>Elote</li><li>Jalapeño</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Pizza Mexicana')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Pizza Mexicana', 90, 'pizza-mexicana')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍕</span><div class="card-name">Pizza 4 Quesos</div></div>
           <div class="card-body">
+            <div class="price-badge">$95 – $170</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-pizza-4quesos">📦 Stock: <strong>6</strong></span></div>
             <h4>Tamaños</h4>
             <div class="variants"><span class="tag">Personal</span><span class="tag">Mediana</span><span class="tag">Grande</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Queso azul</li><li>Mozzarella extra</li><li>Nuez</li><li>Miel de abeja</li>
-            </ul>
+            <ul class="extras-list"><li>Queso azul</li><li>Mozzarella extra</li><li>Nuez</li><li>Miel de abeja</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Pizza 4 Quesos')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Pizza 4 Quesos', 95, 'pizza-4quesos')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
     <!-- HAMBURGUESAS -->
     <div id="tab-hamburguesas" class="menu-section">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa Clásica</div></div>
           <div class="card-body">
+            <div class="price-badge">$70</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-burger-clasica">📦 Stock: <strong>12</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Sencilla</span><span class="tag">Doble</span><span class="tag">Con tocino</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Tocino extra</li><li>Queso americano</li><li>Aguacate</li><li>Cebolla caramelizada</li>
-            </ul>
+            <ul class="extras-list"><li>Tocino extra</li><li>Queso americano</li><li>Aguacate</li><li>Cebolla caramelizada</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Hamburguesa Clásica')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Hamburguesa Clásica', 70, 'burger-clasica')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa BBQ</div></div>
           <div class="card-body">
+            <div class="price-badge">$80</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-burger-bbq">📦 Stock: <strong>10</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Regular</span><span class="tag">Doble carne</span><span class="tag">Picante</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Salsa BBQ extra</li><li>Jalapeños</li><li>Anillos de cebolla</li><li>Queso cheddar</li>
-            </ul>
+            <ul class="extras-list"><li>Salsa BBQ extra</li><li>Jalapeños</li><li>Anillos de cebolla</li><li>Queso cheddar</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Hamburguesa BBQ')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Hamburguesa BBQ', 80, 'burger-bbq')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa de Pollo</div></div>
           <div class="card-body">
+            <div class="price-badge">$75</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-burger-pollo">📦 Stock: <strong>10</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Crispy</span><span class="tag">A la plancha</span><span class="tag">Spicy</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Guacamole</li><li>Queso suizo</li><li>Mayonesa de chipotle</li>
-            </ul>
+            <ul class="extras-list"><li>Guacamole</li><li>Queso suizo</li><li>Mayonesa de chipotle</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Hamburguesa de Pollo')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Hamburguesa de Pollo', 75, 'burger-pollo')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍔</span><div class="card-name">Hamburguesa Especial</div></div>
           <div class="card-body">
+            <div class="price-badge">$90</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-burger-especial">📦 Stock: <strong>8</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Con huevo</span><span class="tag">Mushroom</span><span class="tag">Deluxe</span></div>
             <h4>Ingredientes extra</h4>
-            <ul class="extras-list">
-              <li>Huevo estrellado</li><li>Champiñones salteados</li><li>Pimientos asados</li><li>Tocino</li>
-            </ul>
+            <ul class="extras-list"><li>Huevo estrellado</li><li>Champiñones salteados</li><li>Pimientos asados</li><li>Tocino</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Hamburguesa Especial')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Hamburguesa Especial', 90, 'burger-especial')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
     <!-- OTROS -->
     <div id="tab-otros" class="menu-section">
       <div class="menu-grid">
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🍜</span><div class="card-name">Sopa de Pasta</div></div>
           <div class="card-body">
+            <div class="price-badge">$40</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-sopa-pasta">📦 Stock: <strong>15</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Seca</span><span class="tag">Aguada</span><span class="tag">Con crema</span></div>
             <h4>Ingredientes extra</h4>
             <ul class="extras-list"><li>Queso rallado</li><li>Crema extra</li><li>Chile serrano</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Sopa de Pasta')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Sopa de Pasta', 40, 'sopa-pasta')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌯</span><div class="card-name">Burritos</div></div>
           <div class="card-body">
+            <div class="price-badge">$55</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-burrito">📦 Stock: <strong>12</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Frijoles</span><span class="tag">Pollo</span><span class="tag">Asada</span><span class="tag">Mixto</span></div>
             <h4>Ingredientes extra</h4>
             <ul class="extras-list"><li>Arroz</li><li>Pico de gallo</li><li>Crema</li><li>Guacamole</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Burrito')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Burrito', 55, 'burrito')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🥗</span><div class="card-name">Quesadillas</div></div>
           <div class="card-body">
+            <div class="price-badge">$45</div>
+            <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-quesadilla">📦 Stock: <strong>15</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Queso</span><span class="tag">Pollo</span><span class="tag">Chorizo</span><span class="tag">Hongos</span></div>
             <h4>Ingredientes extra</h4>
             <ul class="extras-list"><li>Huitlacoche</li><li>Flor de calabaza</li><li>Rajas con crema</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Quesadilla')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Quesadilla', 45, 'quesadilla')">+ Agregar al pedido</button>
         </div>
+
         <div class="card">
           <div class="card-header"><span class="card-emoji">🌭</span><div class="card-name">Hot Dogs</div></div>
           <div class="card-body">
+            <div class="price-badge">$35</div>
+            <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-hotdog">📦 Stock: <strong>4</strong></span></div>
             <h4>Variantes</h4>
             <div class="variants"><span class="tag">Sencillo</span><span class="tag">Con tocino</span><span class="tag">Especial</span></div>
             <h4>Ingredientes extra</h4>
             <ul class="extras-list"><li>Cebolla frita</li><li>Mostaza / catsup</li><li>Mayonesa</li><li>Chile jalapeño</li></ul>
           </div>
-          <button class="add-btn" onclick="addItem('Hot Dog')">+ Agregar al pedido</button>
+          <button class="add-btn" onclick="addItem('Hot Dog', 35, 'hotdog')">+ Agregar al pedido</button>
         </div>
+
       </div>
     </div>
 
@@ -862,62 +812,79 @@
     <h2 class="section-title">🎉 <span>Snacks</span></h2>
     <p class="section-sub" style="color:rgba(255,255,255,.65)">Para esos momentos entre clases</p>
     <div class="snack-grid">
+
       <div class="snack-card">
         <span class="s-emoji">🌽</span>
         <h3>Doritos</h3>
-        <div class="variants">
-          <span class="tag">Nacho</span><span class="tag">Flamin Hot</span><span class="tag">Salsa Verde</span><span class="tag">Dinamita</span>
-        </div>
+        <div class="snack-price">$18</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-doritos">📦 Stock: <strong>20</strong></span></div>
+        <div class="variants"><span class="tag">Nacho</span><span class="tag">Flamin Hot</span><span class="tag">Salsa Verde</span><span class="tag">Dinamita</span></div>
+        <button class="snack-add-btn" onclick="addItem('Doritos', 18, 'doritos')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🥔</span>
         <h3>Ruffles</h3>
-        <div class="variants">
-          <span class="tag">Queso</span><span class="tag">Crema y Cebolla</span><span class="tag">Original</span>
-        </div>
+        <div class="snack-price">$18</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-ruffles">📦 Stock: <strong>15</strong></span></div>
+        <div class="variants"><span class="tag">Queso</span><span class="tag">Crema y Cebolla</span><span class="tag">Original</span></div>
+        <button class="snack-add-btn" onclick="addItem('Ruffles', 18, 'ruffles')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🧡</span>
         <h3>Sabritas</h3>
-        <div class="variants">
-          <span class="tag">Original</span><span class="tag">Limón</span><span class="tag">Adobadas</span><span class="tag">Habanero</span>
-        </div>
+        <div class="snack-price">$16</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-sabritas">📦 Stock: <strong>18</strong></span></div>
+        <div class="variants"><span class="tag">Original</span><span class="tag">Limón</span><span class="tag">Adobadas</span><span class="tag">Habanero</span></div>
+        <button class="snack-add-btn" onclick="addItem('Sabritas', 16, 'sabritas')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🍪</span>
         <h3>Galletas</h3>
-        <div class="variants">
-          <span class="tag">Oreo</span><span class="tag">Chokis</span><span class="tag">Marías</span><span class="tag">Principe</span>
-        </div>
+        <div class="snack-price">$14</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-galletas">📦 Stock: <strong>20</strong></span></div>
+        <div class="variants"><span class="tag">Oreo</span><span class="tag">Chokis</span><span class="tag">Marías</span><span class="tag">Principe</span></div>
+        <button class="snack-add-btn" onclick="addItem('Galletas', 14, 'galletas')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🌶️</span>
         <h3>Takis</h3>
-        <div class="variants">
-          <span class="tag">Fuego</span><span class="tag">Guacamole</span><span class="tag">Nitro</span>
-        </div>
+        <div class="snack-price">$20</div>
+        <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-takis">📦 Stock: <strong>5</strong></span></div>
+        <div class="variants"><span class="tag">Fuego</span><span class="tag">Guacamole</span><span class="tag">Nitro</span></div>
+        <button class="snack-add-btn" onclick="addItem('Takis', 20, 'takis')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🍫</span>
         <h3>Chocolates</h3>
-        <div class="variants">
-          <span class="tag">Carlos V</span><span class="tag">Abuelita</span><span class="tag">Kinder</span>
-        </div>
+        <div class="snack-price">$15</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-chocolates">📦 Stock: <strong>12</strong></span></div>
+        <div class="variants"><span class="tag">Carlos V</span><span class="tag">Abuelita</span><span class="tag">Kinder</span></div>
+        <button class="snack-add-btn" onclick="addItem('Chocolates', 15, 'chocolates')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🍬</span>
         <h3>Dulces</h3>
-        <div class="variants">
-          <span class="tag">Pulparindo</span><span class="tag">Mazapán</span><span class="tag">Pelon Pelo Rico</span>
-        </div>
+        <div class="snack-price">$8</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-dulces">📦 Stock: <strong>30</strong></span></div>
+        <div class="variants"><span class="tag">Pulparindo</span><span class="tag">Mazapán</span><span class="tag">Pelon Pelo Rico</span></div>
+        <button class="snack-add-btn" onclick="addItem('Dulces', 8, 'dulces')">+ Agregar</button>
       </div>
+
       <div class="snack-card">
         <span class="s-emoji">🥜</span>
         <h3>Maní / Cacahuates</h3>
-        <div class="variants">
-          <span class="tag">Enchilados</span><span class="tag">Japoneses</span><span class="tag">Con limón</span>
-        </div>
+        <div class="snack-price">$12</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-mani">📦 Stock: <strong>20</strong></span></div>
+        <div class="variants"><span class="tag">Enchilados</span><span class="tag">Japoneses</span><span class="tag">Con limón</span></div>
+        <button class="snack-add-btn" onclick="addItem('Maní / Cacahuates', 12, 'mani')">+ Agregar</button>
       </div>
+
     </div>
   </div>
 </section>
@@ -930,35 +897,52 @@
     <h2 class="section-title">Bebidas <span>y Refrescos</span></h2>
     <p class="section-sub">Hidratación perfecta para tu día de estudio</p>
     <div class="drink-grid">
+
       <div class="drink-card">
         <span class="d-emoji">🥤</span>
         <h3>Refrescos</h3>
+        <div class="drink-price">$20</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-refresco">📦 Stock: <strong>25</strong></span></div>
         <div class="variants" style="justify-content:center">
-          <span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta Naranja</span><span class="tag">Sprite</span>
-          <span class="tag">Manzanita Sol</span><span class="tag">Mirinda</span><span class="tag">Sangría</span>
+          <span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta Naranja</span>
+          <span class="tag">Sprite</span><span class="tag">Manzanita Sol</span><span class="tag">Mirinda</span><span class="tag">Sangría</span>
         </div>
+        <button class="drink-add-btn" onclick="addItem('Refresco', 20, 'refresco')">+ Agregar</button>
       </div>
+
       <div class="drink-card">
         <span class="d-emoji">💧</span>
         <h3>Agua Natural</h3>
+        <div class="drink-price">$12 – $18</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-agua">📦 Stock: <strong>30</strong></span></div>
         <div class="variants" style="justify-content:center">
           <span class="tag">500 ml</span><span class="tag">1 Litro</span><span class="tag">Vaso con hielo</span>
         </div>
+        <button class="drink-add-btn" onclick="addItem('Agua Natural', 12, 'agua')">+ Agregar</button>
       </div>
+
       <div class="drink-card">
         <span class="d-emoji">🫙</span>
         <h3>Aguas Frescas</h3>
+        <div class="drink-price">$15</div>
+        <div class="stock-wrap"><span class="stock-badge stock-ok" id="stock-badge-agua-fresca">📦 Stock: <strong>20</strong></span></div>
         <div class="variants" style="justify-content:center">
           <span class="tag">Jamaica</span><span class="tag">Horchata</span><span class="tag">Limón</span><span class="tag">Tamarindo</span>
         </div>
+        <button class="drink-add-btn" onclick="addItem('Agua Fresca', 15, 'agua-fresca')">+ Agregar</button>
       </div>
+
       <div class="drink-card">
         <span class="d-emoji">☕</span>
         <h3>Café</h3>
+        <div class="drink-price">$25 – $35</div>
+        <div class="stock-wrap"><span class="stock-badge stock-low" id="stock-badge-cafe">📦 Stock: <strong>6</strong></span></div>
         <div class="variants" style="justify-content:center">
           <span class="tag">Americano</span><span class="tag">Capuchino</span><span class="tag">Café de olla</span><span class="tag">Nescafé</span>
         </div>
+        <button class="drink-add-btn" onclick="addItem('Café', 25, 'cafe')">+ Agregar</button>
       </div>
+
     </div>
   </div>
 </section>
@@ -987,8 +971,7 @@
         <h3>Ubicación</h3>
         <p>
           Instituto Tecnológico<br>de Pabellón de Arteaga<br><br>
-          Pabellón de Arteaga, AGS<br>
-          México
+          Pabellón de Arteaga, AGS<br>México
         </p>
       </div>
       <div class="info-card">
@@ -1008,6 +991,7 @@
 <!-- ══ CART BAR ══ -->
 <div id="cart-bar">
   <span>🛒 Tu pedido: <strong id="cart-count">0</strong> artículo(s)</span>
+  <span id="cart-bar-total"></span>
   <button id="order-btn" onclick="openModal()">Ver pedido</button>
 </div>
 
@@ -1017,10 +1001,18 @@
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h2>Tu Pedido 🧾</h2>
     <ul id="cart-items"></ul>
+    <div class="cart-total-row">
+      <span>TOTAL</span>
+      <span id="modal-total">$0</span>
+    </div>
     <div class="modal-fields">
       <input type="text" id="customer-name" placeholder="Tu nombre" />
       <input type="text" id="customer-group" placeholder="Carrera / Grupo (opcional)" />
       <textarea id="customer-notes" placeholder="Notas o especificaciones..." rows="3"></textarea>
+    </div>
+    <div class="modal-order-total">
+      <span>💳 Total a pagar:</span>
+      <span id="modal-pay-total">$0</span>
     </div>
     <button class="modal-send" onclick="sendOrder()">📲 Enviar pedido por WhatsApp</button>
   </div>
@@ -1028,16 +1020,61 @@
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <p>© 2025 <strong>Cafetec</strong> · Instituto Tecnológico de Pabellón de Arteaga · Pabellón de Arteaga, AGS, México</p>
+  <p>© 2025 <strong>CafeWeb</strong> · Instituto Tecnológico de Pabellón de Arteaga · Pabellón de Arteaga, AGS, México</p>
 </footer>
 
 <script>
-  /* ─ CART ─ */
-  let cart = [];
+  /* ─── STOCK ─── */
+  const stock = {};
+  // Inicializar stock desde los badges en el HTML
+  document.querySelectorAll('[id^="stock-badge-"]').forEach(el => {
+    const key = el.id.replace('stock-badge-', '');
+    const num = parseInt(el.querySelector('strong').textContent);
+    stock[key] = num;
+  });
 
-  function addItem(name) {
-    cart.push(name);
-    document.getElementById('cart-count').textContent = cart.length;
+  function updateStockBadge(key) {
+    const el = document.getElementById('stock-badge-' + key);
+    if (!el) return;
+    const qty = stock[key];
+    el.querySelector('strong').textContent = qty;
+    el.className = 'stock-badge';
+    if (qty <= 0) {
+      el.classList.add('stock-out');
+      el.innerHTML = '❌ Agotado';
+    } else if (qty <= 5) {
+      el.classList.add('stock-low');
+      el.innerHTML = '⚠️ Últimas: <strong>' + qty + '</strong>';
+    } else {
+      el.classList.add('stock-ok');
+      el.innerHTML = '📦 Stock: <strong>' + qty + '</strong>';
+    }
+    // Deshabilitar botón si agotado
+    const btns = document.querySelectorAll(`[onclick*="'${key}'"]`);
+    btns.forEach(btn => {
+      btn.disabled = qty <= 0;
+      if (qty <= 0) btn.textContent = 'Agotado';
+    });
+  }
+
+  /* ─── CART ─── */
+  let cart = []; // [{name, price, key}]
+
+  function getTotal() {
+    return cart.reduce((sum, item) => sum + item.price, 0);
+  }
+
+  function addItem(name, price, key) {
+    if (stock[key] !== undefined) {
+      if (stock[key] <= 0) { alert('Lo sentimos, este producto está agotado.'); return; }
+      stock[key]--;
+      updateStockBadge(key);
+    }
+    cart.push({ name, price, key });
+    const count = cart.length;
+    document.getElementById('cart-count').textContent = count;
+    const total = getTotal();
+    document.getElementById('cart-bar-total').textContent = '💰 $' + total;
     const bar = document.getElementById('cart-bar');
     bar.classList.add('visible');
     bar.animate([{background:'#1a3a8a'},{background:'#F5C400'},{background:'#122360'}], {duration:500});
@@ -1051,16 +1088,27 @@
     } else {
       cart.forEach((item, i) => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${item}</span><button class="rm-btn" onclick="removeItem(${i})">✕</button>`;
+        li.innerHTML = `<span class="item-name">${item.name}</span><span class="item-price">$${item.price}</span><button class="rm-btn" onclick="removeItem(${i})">✕</button>`;
         list.appendChild(li);
       });
     }
+    const total = getTotal();
+    document.getElementById('modal-total').textContent = '$' + total;
+    document.getElementById('modal-pay-total').textContent = '$' + total;
     document.getElementById('modal').classList.add('open');
   }
 
   function removeItem(i) {
+    const item = cart[i];
+    // Devolver stock
+    if (item.key && stock[item.key] !== undefined) {
+      stock[item.key]++;
+      updateStockBadge(item.key);
+    }
     cart.splice(i, 1);
     document.getElementById('cart-count').textContent = cart.length;
+    const total = getTotal();
+    document.getElementById('cart-bar-total').textContent = cart.length > 0 ? '💰 $' + total : '';
     if (!cart.length) document.getElementById('cart-bar').classList.remove('visible');
     openModal();
   }
@@ -1074,18 +1122,20 @@
     const group = document.getElementById('customer-group').value.trim();
     const notes = document.getElementById('customer-notes').value.trim();
     if (!cart.length) { alert('Agrega artículos primero.'); return; }
-    let msg = `*Pedido - Cafetec*\n\n👤 *Cliente:* ${name}`;
+    const total = getTotal();
+    let msg = `*Pedido - CafeWeb*\n\n👤 *Cliente:* ${name}`;
     if (group) msg += `\n📚 *Grupo:* ${group}`;
     msg += `\n\n🛒 *Artículos:*\n`;
-    cart.forEach((item, i) => msg += `${i+1}. ${item}\n`);
-    if (notes) msg += `\n📝 *Notas:* ${notes}`;
+    cart.forEach((item, i) => msg += `${i+1}. ${item.name} — $${item.price}\n`);
+    msg += `\n💰 *Total a pagar: $${total}*`;
+    if (notes) msg += `\n\n📝 *Notas:* ${notes}`;
     const url = `https://wa.me/524652038627?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   }
 
   document.getElementById('modal').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
 
-  /* ─ TABS ─ */
+  /* ─── TABS ─── */
   function showTab(tab, btn) {
     document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('visible'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1093,11 +1143,11 @@
     btn.classList.add('active');
   }
 
-  /* ─ STATUS BADGE ─ */
+  /* ─── STATUS BADGE ─── */
   (function(){
     const badge = document.getElementById('status-badge');
     const now = new Date();
-    const day = now.getDay(); // 0=Sun,6=Sat
+    const day = now.getDay();
     const h = now.getHours() + now.getMinutes()/60;
     if (day === 0) {
       badge.textContent = 'CERRADO HOY'; badge.className = 'badge-closed';
